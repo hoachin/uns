@@ -9,7 +9,7 @@ pub const EtherType = enum(u16) {
 };
 
 pub const EthernetFrame = struct {
-    buffer: [1518]u8,
+    buffer: [1514]u8,
     len: usize,
 
     pub fn init(dmac: MacAddress, smac: MacAddress, ether_type: EtherType, payload: []const u8) !EthernetFrame {
